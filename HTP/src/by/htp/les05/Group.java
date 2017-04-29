@@ -5,74 +5,67 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Group {
-        int id;
-        String name;
-        Date birthdate;
-        String birthd;
-        String telnumber;
-        String faculty;
-        int course;
+	private int id;
+	private String name;
+	private Date birthdate;
+	private String telnumber;
+	private String faculty;
+	private int course;
+	private double mark;
 
-        public Group(String name, String birthd, String telnumber, String faculty, int course) {
-                this.name = name;
-                this.birthdate = dateformat(birthd);
-                this.telnumber = telnumber;
-                this.faculty = faculty;
-                this.course = course;
-        }
+	public Group(String name, Date birthdate, String telnumber, String faculty, int course, double mark) {
+		this.name = name;
+		this.birthdate = birthdate;
+		this.telnumber = telnumber;
+		this.faculty = faculty;
+		this.course = course;
+	}
 
-        public String getName() {
-                return name;
-        }
+	public String getName() {
+		return name;
+	}
 
-        public void setName(String name) {
-                this.name = name;
-        }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-        public Date getBirthdate() {
-                return birthdate;
-        }
+	public Date getBirthdate() {
+		return birthdate;
+	}
 
-        public Date dateformat(String birthd){
-                SimpleDateFormat ft = new SimpleDateFormat ("yyyy-MM-dd"); 
-                //Date parsingDate;
-              try {
-                 this.birthdate = ft.parse(birthd); 
-                 //System.out.println(parsingDate); 
-              }catch (ParseException e) { 
-                 System.out.println("Нераспаршена с помощью " + ft); 
-              }
-                return birthdate;
-        }
+	public void setBirthdate(Date birthdate) {
+		this.birthdate = birthdate;
+	}
 
+	public String getTelnumber() {
+		return telnumber;
+	}
 
+	public void setTelnumber(String telnumber) {
+		this.telnumber = telnumber;
+	}
 
-        public void setBirthdate(String birthd) {
-                this.birthdate = dateformat(birthd);
-        }
+	public String getFaculty() {
+		return faculty;
+	}
 
-        public String getTelnumber() {
-                return telnumber;
-        }
+	public void setFaculty(String faculty) {
+		this.faculty = faculty;
+	}
 
-        public void setTelnumber(String telnumber) {
-                this.telnumber = telnumber;
-        }
+	public int getCourse() {
+		return course;
+	}
 
-        public String getFaculty() {
-                return faculty;
-        }
+	public void setCourse(int course) {
+		this.course = course;
+	}
 
-        public void setFaculty(String faculty) {
-                this.faculty = faculty;
-        }
+	public double getMark() {
+		return mark;
+	}
 
-        public int getCourse() {
-                return course;
-        }
-
-        public void setCourse(int course) {
-                this.course = course;
-        }
-
+	public void setMark(double mark) {
+		this.mark = mark;
+	}
 }
