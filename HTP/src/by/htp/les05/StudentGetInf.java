@@ -19,7 +19,7 @@ public class StudentGetInf {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	
 
 		ArrayList<Group> list = new ArrayList<Group>();
 
