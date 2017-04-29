@@ -19,6 +19,7 @@ public class Group {
 		this.telnumber = telnumber;
 		this.faculty = faculty;
 		this.course = course;
+		this.mark = mark;
 	}
 
 	public String getName() {
