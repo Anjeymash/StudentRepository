@@ -1,11 +1,11 @@
 package by.htp.les05;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
+//import java.text.ParseException;
+//import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Group {
-	private int id;
+	//private int id;
 	private String name;
 	private Date birthdate;
 	private String telnumber;
