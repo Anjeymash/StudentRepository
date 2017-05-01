@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class StudentGetInf {
-
+/////
 	public static Date dateformat(String birthd) {
 		SimpleDateFormat ft = new SimpleDateFormat("yyyy-MM-dd");
 		Date birthdate = null;
