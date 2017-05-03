@@ -12,14 +12,13 @@ public class StudentGetInf {
 		Date birthdate = null;
 		try {
 			birthdate = ft.parse(birthd);
-			} catch (ParseException e) {
+		} catch (ParseException e) {
 			System.out.println("Ќераспаршена с помощью " + ft);
 		}
 		return birthdate;
 	}
 
 	public static void main(String[] args) {
-	
 
 		ArrayList<Student> list = new ArrayList<Student>();
 
@@ -39,26 +38,25 @@ public class StudentGetInf {
 		double evmark;
 
 		for (Student x : list) {
-			
+
 			ball += x.getMark();
 			if (x.getMark() > 2.5)
 				n5++;
-			else 
+			else
 				n2++;
 			i++;
 		}
 		evmark = ball / i;
 
-		System.out.println(	" средний бал студентов: " + evmark + "\n число успевающих: " + n5 + "\n число неуспевающих: " + n2);
+		System.out.println(
+				" средний бал студентов: " + evmark + "\n число успевающих: " + n5 + "\n число неуспевающих: " + n2);
 
 		listSort(list);
 		for (int j = 0; j < list.size(); j++) {
-			System.out.println(list.get(j).getName());
+			//System.out.println(list.get(j).getName());
 			list.get(j).test();
 		}
-	
-	
-	
+
 	}
 
 	static void listSort(ArrayList<Student> list) {
@@ -68,7 +66,7 @@ public class StudentGetInf {
 					Student t = list.get(j);
 					list.set(j, list.get(j + 1));
 					list.set((j + 1), t);
-				//////	
+					//////
 
 				}
 			}
