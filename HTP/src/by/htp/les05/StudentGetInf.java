@@ -69,7 +69,7 @@ public class StudentGetInf {
 					Group t = list.get(j);
 					list.set(j, list.get(j + 1));
 					list.set((j + 1), t);
-					
+				//////	
 
 				}
 			}
