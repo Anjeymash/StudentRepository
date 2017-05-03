@@ -1,31 +1,23 @@
 package by.htp.les05;
 
 
-
 import java.util.Date;
+import java.lang.Enum;
 
-
-public class Student {
-	private static int group;
+public class Bakalavr extends Student {
+	private static int group ;
 	private String name;
 	private Date birthdate;
 	private String telnumber;
 	private String faculty;
 	private int course;
 	private double mark;
-	
-	
 
-	public Student(String name, Date birthdate, String telnumber, String faculty, int course, double mark) {
-		this.name = name;
-		this.birthdate = birthdate;
-		this.telnumber = telnumber;
-		this.faculty = faculty;
-		this.course = course;
-		this.mark = mark;
+	public Bakalavr(String name, Date birthdate, String telnumber, String faculty, int course, double mark) {
+		super(name, birthdate, telnumber, faculty, course, mark);
 	}
 
-	public String getName() {
+	/*public String getName() {
 		return name;
 	}
 
@@ -72,17 +64,19 @@ public class Student {
 	public void setMark(double mark) {
 		this.mark = mark;
 	}
+	*/
 	public void test()
-		{
-		Fakultet fak = Fakultet.valueOf(getFaculty());
-		
-		switch(fak){
-		case ENERGOFAK: System.out.println("Тест для студента энергофака");break;
-		case MASHFAK: System.out.println("Тест для студента машфака");break;
-		case FITR: System.out.println("Тест для студента ФИТР");break;
-		case STROYFAK: System.out.println("Тест для студента стройфака");break;
-		default: System.out.println("Нет такого факультета");break;
-		}
-		
-		}
+	{
+	Fakultet fak = Fakultet.valueOf(getFaculty());
+	
+	switch(fak){
+	case ENERGOFAK: System.out.println("Тест для студента энергофака (бакалавр)");break;
+	case MASHFAK: System.out.println("Тест для студента машфака (бакалавр)");break;
+	case FITR: System.out.println("Тест для студента ФИТР (бакалавр)");break;
+	case STROYFAK: System.out.println("Тест для студента стройфака (бакалавр)");break;
+	default: System.out.println("Нет такого факультета");break;
+	}
+	
+	}
+	
 }
