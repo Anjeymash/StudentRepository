@@ -69,7 +69,8 @@ public class Student {
 	}
 
 	public void test() {
-		Fakultet fak = Fakultet.valueOf(getFaculty());
+		try{
+			Fakultet fak = Fakultet.valueOf(getFaculty());
 
 		switch (fak) {
 		case ENERGOFAK:
@@ -88,6 +89,7 @@ public class Student {
 			System.out.println("Нет такого факультета " + getName());
 			break;
 		}
-
+		}
+		catch(IllegalArgumentException e){System.out.println("Перехвачено исключение"+ e);}
 	}
 }

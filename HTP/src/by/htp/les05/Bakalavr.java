@@ -9,7 +9,9 @@ public class Bakalavr extends Student {
 	}
 
 	public void test() {
+		try{
 		Fakultet fak = Fakultet.valueOf(getFaculty());
+		
 
 		switch (fak) {
 		case ENERGOFAK:
@@ -28,7 +30,8 @@ public class Bakalavr extends Student {
 			System.out.println("Нет такого факультета");
 			break;
 		}
-
+		}
+		catch(IllegalArgumentException e){System.out.println("Перехвачено исключение"+ e);}
 	}
 
 }
